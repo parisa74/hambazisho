@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When enabled -->
+    <item android:state_enabled="true" android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <gradient android:angle="@dimen/gradientAngle" android:endColor="@color/defaultBtnBackgroundEndColor" android:startColor="@color/defaultBtnBackgroundStartColor" />
+            <!--<stroke android:width="1dp" android:color="#bb6008" />-->
+            <corners android:radius="@dimen/default_btn_radius" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape>
+    </item>
+
+    <!-- When enabled and pressed -->
+    <item android:state_enabled="true" android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/defaultBtnBackgroundStartColor" />
+            <!--<stroke android:width="1dp" android:color="#bb6008" />-->
+            <corners android:radius="@dimen/default_btn_radius" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape>
+    </item>
+
+
+    <!-- When disabled -->
+    <item android:state_enabled="false" >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/defaultBtnBackgroundDisable" />
+            <!--<stroke android:width="1dp" android:color="#bb6008" />-->
+            <corners android:radius="@dimen/default_btn_radius" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape>
+    </item>
+</selector>

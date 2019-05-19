@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.activity.LoginActivity">
+
+    <!-- Insert mobile View -->
+    <ScrollView
+        android:id="@+id/insertMobileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/logonew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="@string/loginDescription_insertMobile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <EditText
+                    android:id="@+id/input_mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/hint_mobileNumber"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/editText_textColor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btn_submitMobileNumber"
+                    style="@style/defaultBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/btnText_sendVerificationCode" />
+
+                <ProgressBar
+                    android:id="@+id/prgbr_sendVerificationCode"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:theme="@style/ProgressWhiteAccent"
+                    android:translationZ="2dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Insert verification code view -->
+    <ScrollView
+        android:id="@+id/insertVerificationCodeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/logonew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/loginDescription_insertVerificationCode" />
+
+            <TextView
+                android:id="@+id/tv_mobileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                tools:text="09120057845" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_verificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <EditText
+                    android:id="@+id/input_verificationCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/hint_verificationCode"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:textColor="@color/editText_textColor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    tools:text="1:59" />
+
+                <TextView
+                    android:id="@+id/tv_modifyMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/loginDescription_correctMobileNumber"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_repeatSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/loginDescription_repeatSend"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btn_submitVerificationCode"
+                    style="@style/defaultBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/btnText_submitVerificationCode" />
+
+                <ProgressBar
+                    android:id="@+id/prgbr_checkVerificationCode"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:theme="@style/ProgressWhiteAccent"
+                    android:translationZ="2dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

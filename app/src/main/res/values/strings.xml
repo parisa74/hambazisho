@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HamBaziSho</string>
+
+    <string name="loginDescription_insertMobile">برای ورود شماره موبایل خود را وارد کنید</string>
+    <string name="loginDescription_insertVerificationCode">کدی که از طریق پیامک برای شما ارسال شده را وارد نمایید</string>
+    <string name="loginDescription_correctMobileNumber">اصلاح شماره همراه</string>
+    <string name="loginDescription_repeatSend">ارسال مجدد کد</string>
+    <string name="hint_mobileNumber">شماره موبایل</string>
+    <string name="hint_verificationCode">کد فعال سازی</string>
+    <string name="err_msg_mobileNumber_empty">شماره موبایل خود را وارد نمایید</string>
+    <string name="err_msg_mobileNumber_incorrect">شماره موبایل خود را صحیح وارد نمایید</string>
+    <string name="btnText_sendVerificationCode">ارسال کد فعال سازی</string>
+    <string name="btnText_submitVerificationCode">تایید</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e9b230</color>
+    <color name="colorPrimaryDark">#d9872e</color>
+    <color name="colorAccent">#8a0020</color>
+    <color name="primary_light">#FFECB3</color>
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#BDBDBD</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="windowBackground">#f1f1f1</color>
+    <color name="statusBarColor">@android:color/black</color>
+
+
+    <color name="editText_textColor">#757575</color>
+
+    <color name="gradientStartColor">@color/colorPrimary</color>
+    <color name="gradientEndColor">@color/colorPrimaryDark</color>
+
+    <color name="defaultBtnText">#FFFFFF</color>
+    <color name="defaultBtnBackground">@color/colorPrimary</color>
+    <color name="defaultBtnBackgroundStartColor">@color/colorPrimary</color>
+    <color name="defaultBtnBackgroundEndColor">@color/colorPrimaryDark</color>
+    <color name="defaultBtnBackgroundDisable">#BDBDBD</color>
+
+    <color name="videoLiked">@color/colorPrimary</color>
+    <color name="videoDisliked">#BDBDBD</color>
+</resources>
